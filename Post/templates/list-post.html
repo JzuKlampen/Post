@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Posts list{% endblock %}
+
+{% block content %}
+<h2>Post list</h2>
+<ul>
+    {% for post in posts_complete %}
+        <a href="{{ post.id }}/"><b>{{ post.get_full_title }}</b></a><br>
+        {{ post.author }} / {{ post.get_type_display }} / {{ post.text }} pages<br>
+        <br>
+    {% endfor %}
+</ul>
+
+<a href="../add/">Add a new post</a><br>
+{% endblock %}

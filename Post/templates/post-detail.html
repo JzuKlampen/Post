@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Post detail{% endblock %}
+
+{% block content %}
+<h2>Post detail</h2>
+
+    <table>
+    <tr>
+        <td><b>Title:</b></td>
+        <td>{{ post_detail.title }}<br></td>
+    </tr>
+    <tr>
+        <td><b>Author:</b></td>
+        <td>{{ post_detail.author }}<br></td>
+    </tr>
+    <tr>
+        <td><b>Type:</b></td>
+        <td>{{ post_detail.get_type_display}}<br></td>
+    </tr><tr>
+        <td><b>:</b></td>
+        <td>{{ post_detail.title }}<br></td>
+    </tr>
+    <tr>
+        <td><b>Type:</b></td>
+        <td>{{ that_one_book.get_type_display }}<br></td>
+    </tr>
+    <tr>
+        <td><b>Date published:</b></td>
+        <td>{{ post_detail.date_published }}<br></td>
+    </tr>
+    <tr>
+        <td><b>Date published:</b></td>
+        <td>{{ that_one_book.date_published }}<br></td>
+    </tr>
+    </table>
+
+    <br>
+    <a href="../">Back to posts</a>
+{% endblock %}
